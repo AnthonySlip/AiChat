@@ -1,0 +1,121 @@
+@import "../../assets/data.scss";
+
+.auth {
+  margin: 12vh auto;
+  width: fit-content;
+  height: fit-content;
+  background-color: $color6;
+  border-radius: 6px;
+  box-shadow: 1px 1px 3px $color2;
+  transition: all .5s ease;
+}
+.auth.Signin {
+  transform: rotate3d(0, 1, 1, 360deg);
+}
+.auth.Login {
+  ransform: rotate3d(1, 1, 0, 360deg);
+}
+
+.auth__body {
+  height: 100%;
+  width: 100%;
+  padding: 30px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.auth__title {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+  width: 20vw;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.auth__input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  position: relative;
+}
+
+.auth__input > input {
+  width: 100%;
+  background-color: $color6;
+  border-bottom: solid 2px $color4;
+  padding-left: 24px;
+  transition: all .5s ease;
+  font-size: 1.2rem;
+}
+
+.auth__input-svg {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  transform: translateY(109%);
+  transition: all .5s ease;
+}
+
+.auth__error {
+  font-size: 1rem;
+  color: crimson;
+}
+
+.auth__submit {
+  background-color: $color5;
+  border-radius: 6px;
+  font-size: 1.1rem;
+}
+
+.auth__change {
+  display: flex;
+  align-items: center;
+  color: $color2;
+}
+.auth__change.Signin {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+.auth__change.Login {
+  align-self: flex-start;
+  flex-direction: row;
+}
+.auth__change-svg {
+  width: 30px;
+  height: 30px;
+}
+.auth__change-svg.Signin {
+  transform: rotate(0deg);
+}
+.auth__change-svg.Login {
+  transform: rotate(180deg);
+}
+
+.auth__change-title {
+  line-height: 100%;
+  font-size: 1.2rem;
+}
+
+.auth__input > input:focus ~ .auth__input-svg{
+  bottom: 100%;
+  transform: translateY(0);
+  width: 18px;
+  height: 18px;
+}
+.auth__input > input:focus {
+  padding: 0;
+}

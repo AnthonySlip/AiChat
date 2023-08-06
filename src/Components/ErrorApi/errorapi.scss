@@ -1,0 +1,36 @@
+@import "../../assets/data.scss";
+
+.errorApi {
+  height: 100%;
+}
+
+.errorApi__body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.errorApi__title {
+  font-size: 2rem;
+  color: rgba(196, 17, 55, 0.67);
+  font-weight: $fontWeight700;
+}
+
+.errorApi__img {
+  width: 16vw;
+  height: auto;
+  max-width: 512px;
+  min-width: 128px;
+  background-color: rgba(220, 20, 60, 0.67);
+  border-radius: 36px;
+  padding: 20px;
+}
+
+.errorApi__error {
+  font-size: 1.3rem;
+  font-weight: $fontWeight700;
+  color: rgba(196, 17, 55, 0.67);
+}

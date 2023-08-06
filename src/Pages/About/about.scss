@@ -1,0 +1,183 @@
+@import "../../assets/data.scss";
+
+.about {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  gap: 6px;
+}
+.about__body {
+  padding: 26px 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  position: relative;
+}
+
+.about__title {
+  text-transform: uppercase;
+  color: $color2;
+  font-size: 3rem;
+  font-weight: $fontWeight700;
+}
+
+
+
+
+.about__articles {
+  width: 100%;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about__article {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.about__article-title {
+  font-size: 1.5rem;
+}
+.about__article-text {
+  line-height: 126%;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+.about__footer{
+  align-self: flex-start;
+  padding: 0 26px;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.about__contacts {
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.about__contact {
+  padding: 3px 6px;
+  width: fit-content;
+  background-color: $color5;
+  border-radius: 6px;
+}
+
+.about__contact-link {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.about__contact-svg {
+  width: 30px;
+  height: 30px;
+  transition: all .3s ease;
+}
+
+.about__contact-tagname {
+  font-size: 1.3rem;
+  color: $color4;
+  transition: all .3s ease;
+}
+
+.about__subArticle{
+  line-height: 120%;
+  font-size: 1rem;
+  max-width: 380px;
+  text-align: justify;
+}
+.about__subArticle > span{
+  font-weight: $fontWeight700;
+  font-size: 1.2rem;
+}
+
+.about__img {
+  position: absolute;
+  width: 160px;
+  right: 12px;
+  bottom: 24px;
+  height: auto;
+  z-index: -5;
+}
+
+
+.about__contact:hover .about__contact-svg{
+  transform: rotate(360deg);
+}
+.about__contact:hover .about__contact-tagname{
+  color: $color2;
+}
+
+.about__article:hover > .about__article-img {
+  width: fit-content;
+}
+
+@media (max-width: 950px) {
+  .about__title {
+    font-size: 2rem;
+  }
+  .about__article-title{
+    font-size: 1.3rem;
+  }
+  .about__article-text{
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 620px) {
+  .about__article-title{
+    font-size: 1.2rem;
+  }
+  .about__article-text{
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 500px) {
+  .about__article-title{
+    font-size: 1.1rem;
+  }
+  .about__article-text{
+    font-size: 1rem;
+  }
+}
+@media (max-width: 430px) {
+  .about__article{
+    width: 100%;
+  }
+  .about__article-title{
+    font-size: 1rem;
+  }
+  .about__article-text{
+    font-size: 0.9rem;
+  }
+  .about__contacts{
+    flex-direction: column;
+  }
+}
+@media (max-width: 390px) {
+  .about__body{
+    justify-content: center;
+  }
+  .about__title{
+    display: none;
+  }
+  .about__articles{
+    display: none;
+  }
+}

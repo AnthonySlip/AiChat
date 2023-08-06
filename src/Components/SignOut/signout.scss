@@ -1,0 +1,15 @@
+@import "../../assets/data.scss";
+
+.signout {
+  margin: 0 10px;
+  background-color: $color5;
+  border-radius: 6px;
+  box-shadow: 1px 1px 1px $color6;
+}
+.signout__body {
+  padding: 3px 12px;
+}
+.signout__title {
+  font-size: 1.5rem;
+  line-height: 100%;
+}

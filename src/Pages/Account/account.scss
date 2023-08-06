@@ -1,0 +1,80 @@
+@import "../../assets/data.scss";
+
+.account {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  gap: 6px;
+}
+
+.account__body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin: 10vh 0;
+}
+.account__title{
+  text-transform: capitalize;
+}
+.account__form {
+  height: fit-content;
+  width: fit-content;
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  background-color: $color6;
+  border-radius: 6px;
+  box-shadow: 1px 1px 3px $color2;
+}
+
+.account__input {
+  width: 250px;
+  position: relative;
+}
+
+.account__input-svg {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(2%);
+  transition: all .3s ease;
+}
+
+.account__input-input {
+  padding: 0;
+  margin: 0;
+  padding-left: 22px;
+  height: 100%;
+  width: 100%;
+  background-color: $color6;
+  border-bottom: solid 2px $color4;
+  transition: all .3s ease;
+}
+
+.account__input-error {
+  font-size: 1rem;
+  color: crimson;
+}
+
+.account__submit{
+  width: 100%;
+  height: fit-content;
+  font-size: 1.3rem;
+  color: $color5;
+  background-color: $color2;
+  border-radius: 6px;
+}
+
+.account__input > .account__input-input:focus ~ .account__input-svg{
+  width: 16px;
+  height: 16px;
+  transform: translateY(-100%);
+}
+.account__input-input:focus {
+  padding: 0;
+}

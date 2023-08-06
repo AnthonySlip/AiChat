@@ -1,0 +1,106 @@
+@import '../../assets/data';
+
+.chat__chats {
+  background-color: $color2;
+  height: 100%;
+}
+
+.chats__body {
+  width: 260px;
+  height: 100%;
+  padding: 62px 12px 24px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  align-items: flex-start;
+}
+
+.chats__createNewChat {
+  width: 100%;
+  text-align: center;
+  padding: 5px 12px;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: $fontWeight700;
+  color: $color1;
+}
+
+.chats__list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: auto;
+}
+.chats__rename-input{
+  background-color: $color1;
+}
+.chats__item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: solid $color1 2px;
+  border-radius: 6px;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+.chats__item.currentChatItem{
+  background-color: $color1;
+
+}
+.chats__item.currentChatItem > h4{
+  color: $color2;
+}
+.chats__item.currentChatItem > span > .chats__item-svg {
+  fill: $color2;
+}
+.chats__item > span {
+  display: flex;
+  gap: 2px;
+}
+.chats__item-title {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  color: $color1;
+}
+
+.chats__item-svg {
+  width: 25px;
+  height: 25px;
+}
+
+.chats__unauthorized-title {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  color: $color1;
+  cursor: pointer;
+}
+
+.chats__unauthorized-random {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: solid $color1 2px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.chats__body > a {
+  width: 100%;
+}
+
+.chats__random-img {
+  width: 100%;
+  height: fit-content;
+  border-radius: 6px 6px 12px 12px;
+}
+
+.chats__random-p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: $color3;
+  line-height: 116%;
+}

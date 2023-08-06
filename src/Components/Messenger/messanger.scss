@@ -1,0 +1,117 @@
+@import "../../assets/data.scss";
+
+.messenger {
+  height: 100%;
+}
+.messenger__body {
+  padding: 3vh 1vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.messenger__messages {
+  width: 100%;
+  flex: 1 1 auto;
+  padding: 32px 0 12px 0;
+  height: 1vh;
+}
+.messenger__list {
+  padding: 5px;
+  margin: 50px;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.messenger__list::-webkit-scrollbar {
+  display: none;
+}
+.messenger__message{
+  background-color: $color5;
+  width: fit-content;
+  max-width: 86%;
+  padding: 6px 10px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 3px $color2;
+  word-break: break-word;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.messenger__message-text{
+  font-size: 1.1em;
+  font-weight: $fontWeight400;
+  text-align: justify;
+}
+.messenger__copy{
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3px;
+  cursor: pointer;
+}
+.messenger__copy-svg{
+  width: 25px;
+  height: 25px;
+}
+.messenger__copy-title{
+  font-size: 1rem;
+}
+
+.messenger__message.user{
+  align-self: flex-end;
+}
+.messenger__message.assistant{
+  align-self: flex-start;
+}
+
+.messenger__form {
+  width: 100%;
+  box-shadow: 1px 1px 3px $color2;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+.messenger__typing {
+  border-radius: 8px;
+  width: 100%;
+  padding: 0 1px 0 12px;
+}
+.messenger__send {
+  padding: 0 16px;
+  border-radius: 0 8px 8px 0;
+  background-color: $color2;
+  color: $color5;
+}
+
+@media (max-width: 650px) {
+  .messenger__body{
+    padding-bottom: 2vh;
+  }
+  .messenger__message{
+    max-width: 92%;
+  }
+  .messenger__message-text{
+    font-size: 1rem;
+  }
+}
+@media (max-width: 430px) {
+  .messenger__body{
+    padding-bottom: 1.2vh;
+  }
+  .messenger__message{
+    max-width: 98%;
+  }
+  .messenger__message-text{
+    font-size: 0.9rem;
+  }
+}
